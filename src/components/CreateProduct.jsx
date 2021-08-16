@@ -1,15 +1,13 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useProductsContext } from '../contexts/ProductsContext'
 
 export default function CreateProduct() {
     const [name, setName] = useState("");
     const [price, setPrice] = useState("");
-    const [products, setProducts] = useProductsContext();
+    const [products, dispatch] = useProductsContext();
 
     function createProduct(e) {
-        const id = Math.floor(Math.random() * 99999999999);
-
-        setProducts([ ...products, { id, name, price } ]);
+        dispatch({ type: 'addProduct', name: name, price: price});
     }
 
     return (

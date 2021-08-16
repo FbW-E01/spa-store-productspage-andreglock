@@ -2,7 +2,7 @@ import Header from './Header'
 import CreateProduct from './CreateProduct'
 import Products from './Products'
 import { ProductsContextProvider } from '../contexts/ProductsContext'
-import { LocaleContext, LocaleContextProvider } from '../contexts/LocaleContext';
+import { LocaleContextProvider } from '../contexts/LocaleContext';
 
 export default function App() {
     return (

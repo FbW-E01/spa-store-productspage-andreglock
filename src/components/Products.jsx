@@ -2,7 +2,7 @@ import { useProductsContext } from '../contexts/ProductsContext';
 import { useLocaleContext } from '../contexts/LocaleContext';
 
 export default function Products() {
-    const [ products, setProducts ] = useProductsContext();
+    const [ products, dispatch ] = useProductsContext();
     const [ locale ] = useLocaleContext();
     let currency;
 
@@ -15,8 +15,7 @@ export default function Products() {
     }
 
     function deleteProduct (element) {
-        const newProducts = products.filter((product) => product.id !== element.id )
-        setProducts(newProducts);
+        dispatch({ type: 'deleteProduct', id: element.id})
     }
 
     return (
