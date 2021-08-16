@@ -14,6 +14,7 @@ export default function Header() {
                     <option value="de-de">Euro</option>
                     <option value="en-us">Dollar</option>
                     <option value="en-gb">Pound</option>
+                    <option value="pt-br">Reais</option>
                 </select>
             </div>
         </header>
