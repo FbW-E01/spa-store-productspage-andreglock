@@ -40,7 +40,7 @@ export default function Products() {
     return (
         <div className="Products">
             {products.map(prod => <div key={prod.id}>
-                {prod.name}: {(prod.price * currency.rate).toFixed(2)} {currency.symbol} 
+                {prod.name}: {currency.symbol} {(prod.price * currency.rate).toFixed(2)}  
                 <button className="inline" onClick={() => deleteProduct(prod)}>X</button>
             </div>)}
         </div>
